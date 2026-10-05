@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Employee Management System</h1>
+  <p>Full Stack Mini Project</p>
+</header>
+
+<main>
+  <section class="stats">
+    <div><span>Total Employees</span><strong id="totalEmployees">0</strong></div>
+    <div><span>Departments</span><strong id="totalDepartments">0</strong></div>
+    <div><span>Average Salary</span><strong id="averageSalary">₹0</strong></div>
+  </section>
+
+  <section class="card">
+    <div class="title-row">
+      <h2 id="formTitle">Add Employee</h2>
+      <button id="cancelButton" class="secondary hidden" type="button">Cancel</button>
+    </div>
+
+    <form id="employeeForm">
+      <input type="hidden" id="employeeIndex">
+
+      <div class="form-grid">
+        <label>Employee ID
+          <input id="employeeId" placeholder="EMP001" required>
+        </label>
+
+        <label>Name
+          <input id="name" placeholder="Employee Name" required>
+        </label>
+
+        <label>Email
+          <input id="email" type="email" placeholder="employee@gmail.com" required>
+        </label>
+
+        <label>Department
+          <select id="department" required>
+            <option value="">Select Department</option>
+            <option>HR</option>
+            <option>IT</option>
+            <option>Finance</option>
+            <option>Marketing</option>
+            <option>Sales</option>
+            <option>Operations</option>
+          </select>
+        </label>
+
+        <label>Position
+          <input id="position" placeholder="Software Developer" required>
+        </label>
+
+        <label>Salary
+          <input id="salary" type="number" min="0" placeholder="600000" required>
+        </label>
+      </div>
+
+      <button id="submitButton" class="primary" type="submit">Add Employee</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <div class="title-row">
+      <h2>Employee List</h2>
+      <input id="searchInput" class="search" placeholder="Search by name, ID or department">
+    </div>
+
+    <div id="message" class="message hidden"></div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th><th>Name</th><th>Email</th><th>Department</th>
+            <th>Position</th><th>Salary</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="employeeTable"></tbody>
+      </table>
+    </div>
+
+    <p id="emptyMessage" class="empty-message">No employees found.</p>
+  </section>
+</main>
+
+<footer>Employee Management System © 2026</footer>
+<script src="script.js"></script>
+</body>
+</html>

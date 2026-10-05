@@ -1,0 +1,128 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+}
+
+header {
+  background: #1f2937;
+  color: white;
+  padding: 28px 6%;
+}
+
+header h1 { margin: 0 0 8px; }
+header p { margin: 0; }
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.stats div, .card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.07);
+}
+
+.stats span, .stats strong { display: block; }
+.stats span { color: #666; margin-bottom: 8px; }
+.stats strong { font-size: 28px; }
+
+.card { margin-bottom: 20px; }
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.title-row h2 { margin: 0; }
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+label { font-weight: bold; }
+
+input, select {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  padding: 11px;
+  border: 1px solid #ccd3dd;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.primary { background: #2563eb; color: white; }
+.secondary { background: #e5e7eb; }
+.edit { background: #f59e0b; color: white; margin-right: 5px; }
+.delete { background: #dc2626; color: white; }
+
+.search { max-width: 330px; }
+.table-wrapper { overflow-x: auto; }
+
+table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th { background: #f0f2f5; }
+
+.message {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 7px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #777;
+  padding: 20px;
+}
+
+.hidden { display: none; }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+@media (max-width: 700px) {
+  .stats, .form-grid { grid-template-columns: 1fr; }
+  .title-row { flex-direction: column; align-items: stretch; }
+  .search { max-width: none; }
+}
